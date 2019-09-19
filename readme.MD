@@ -2,7 +2,7 @@
 This lib contain a lot of Helper, Utilities Functions
 Repository: [https://github.com/dieupxse/net-helpers](https://github.com/dieupxse/net-helpers)
 
-###SecurityHelper
+### SecurityHelper
 
 Security method, hash generate, hash verify, hash encrypt, encrypt algorithm
 
@@ -37,7 +37,7 @@ string Base64UrlEncode(byte[] input);
 string Base64UrlEncode(string input);
 byte[] Base64UrlDecode(string input);
 ```
-###StringHelper
+### StringHelper
 
 String Util
 
@@ -68,12 +68,12 @@ string GetRandomGender();
 List<T> GetList<T>(string data,char mark);
 Tuple<DateTime, DateTime> GetDateRangeQuery(string start,string end);
 ```
-###ApiHelper
+### ApiHelper
 This help to call RestApi inside Net Core App using RestSharp
 ```
 Task<T> CallApi<T> (string url, RestRequest request = null);
 ```
-###CacheHelper
+### CacheHelper
 CacheHelper help to Improve Application Performances  using Memory Caching, this helper contain those methods
 ```
 T GetCache<T>(string key);
@@ -81,7 +81,7 @@ void SetCache(string key, object value, int exp = 30);
 void ClearCache(string key);
 void ClearAllCache(string prefix = "");
 ```
-###EmailHelper
+### EmailHelper
 
 Send Email using SMTP server. This allow to send email in HTML format using any SMTP server like GMail, Yandex, Outlook, Custom SMTP Server...
 
@@ -93,7 +93,7 @@ void Init(string User, string Password, string Server, int Port, bool EnableSsl,
 bool SendMail(string to, string cc, string bcc, string subject, string content);
 ```
 
-###ImageHelper
+### ImageHelper
 
 Scale, Crop, Convert Base64 to Image ....
 
