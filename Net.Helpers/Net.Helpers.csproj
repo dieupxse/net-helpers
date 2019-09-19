@@ -4,22 +4,10 @@
     <Title>The Ultility, Helpers Library for Net Core App</Title>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Net.Helpers</PackageId>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Authors>Jacob Pham</Authors>
     <Company>Jacob Pham</Company>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageReleaseNotes>
-      - 1.0.0: Init Project
-      - 1.0.1: Fixed issues namespace Dependences
-      - 1.0.2: Add Description about this Lib
-    </PackageReleaseNotes>
-    <Description>
-      This Lib contain huge of Helpers Functions:
-      SecurityHelper, StringHelper, EmailHelper, ImageHelper, LogHelper, CacheHelper, ApiHelper
-      Extensions:
-      DateTimeExtensions,  RestClientExtentions (RestSharp Helper Extensions)
-      Checkout Project And Find Out What You Need https://github.com/dieupxse/net-helpers.git
-    </Description>
   </PropertyGroup>
 
   <ItemGroup>
