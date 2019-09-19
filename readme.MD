@@ -110,7 +110,7 @@ Image<Rgba32> CropImage(byte[] content, int x, int y, int width, int height);
 Image<Rgba32> CropImage(Image<Rgba32> image, int x, int y, int width, int height);
 ```
 
-###LogHelper
+### LogHelper
 
 Write Log to file
 
