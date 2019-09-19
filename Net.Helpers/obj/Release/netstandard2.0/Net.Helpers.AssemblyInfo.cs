@@ -14,10 +14,10 @@ using System.Reflection;
       SecurityHelper, StringHelper, EmailHelper, ImageHelper, LogHelper, CacheHelper, ApiHelper
       Extensions:
       DateTimeExtensions,  RestClientExtentions (RestSharp Helper Extensions)
-      Checkout Project And Find Out What You Need :))
+      Checkout Project And Find Out What You Need https://github.com/dieupxse/net-helpers.git
     ")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.1")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.2.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Net.Helpers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Net.Helpers")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.1.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.0.2.0")]

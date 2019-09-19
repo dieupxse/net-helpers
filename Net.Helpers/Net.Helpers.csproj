@@ -18,7 +18,7 @@
       SecurityHelper, StringHelper, EmailHelper, ImageHelper, LogHelper, CacheHelper, ApiHelper
       Extensions:
       DateTimeExtensions,  RestClientExtentions (RestSharp Helper Extensions)
-      Checkout Project And Find Out What You Need :))
+      Checkout Project And Find Out What You Need https://github.com/dieupxse/net-helpers.git
     </Description>
   </PropertyGroup>
 
