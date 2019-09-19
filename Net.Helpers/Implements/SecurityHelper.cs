@@ -426,6 +426,11 @@ namespace Net.Helpers.Implements
             }
         }
 
+        /// <summary>
+        /// Generate SHA1 hash
+        /// </summary>
+        /// <param name="input">clear text</param>
+        /// <returns>SHA1 hash</returns>
         public  string SHA1Hash(string input)
         {
             using (SHA1Managed sha1 = new SHA1Managed())
@@ -638,12 +643,21 @@ namespace Net.Helpers.Implements
             // the plain text value must be correct.
             return (hashValue == expectedHashString);
         }
-
+        /// <summary>
+        /// Base64Encode string
+        /// </summary>
+        /// <param name="plainText"></param>
+        /// <returns></returns>
         public string Base64Encode(string plainText)
         {
             var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
             return Base64Encode(plainTextBytes);
         }
+        /// <summary>
+        /// Decode base64 string
+        /// </summary>
+        /// <param name="plainText"></param>
+        /// <returns></returns>
         public string Base64Encode(byte[] plainText)
         {
             return System.Convert.ToBase64String(plainText);
@@ -658,21 +672,42 @@ namespace Net.Helpers.Implements
             var base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
             return Base64Decode(base64EncodedBytes);
         }
+        /// <summary>
+        /// Decode Base64 from byte
+        /// </summary>
+        /// <param name="base64EncodedData"></param>
+        /// <returns></returns>
         public string Base64Decode(byte[] base64EncodedData)
         {
             return System.Text.Encoding.UTF8.GetString(base64EncodedData);
         }
 
+        /// <summary>
+        /// Encrypt string by Bcrypt
+        /// </summary>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public string BCryptPasswordEncoder(string password)
         {
             return BCrypt.Net.BCrypt.HashPassword(password);
         }
 
+        /// <summary>
+        /// Verify BCrypt Encode 
+        /// </summary>
+        /// <param name="password"></param>
+        /// <param name="hash"></param>
+        /// <returns></returns>
         public bool BCryptPasswordVerifier(string password, string hash)
         {
             return BCrypt.Net.BCrypt.Verify(password, hash);
         }
 
+        /// <summary>
+        /// Get SHA1 string
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public string SHA1(string input)
         {
             using (SHA1Managed sha1 = new SHA1Managed())
@@ -682,6 +717,7 @@ namespace Net.Helpers.Implements
             }
         }
 
+        
         public string PasswordHash(string password)
         {
             return SHA1(SHA1Hash(password));

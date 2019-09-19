@@ -4,7 +4,7 @@
     <Title>The Ultility, Helpers Library for Net Core App</Title>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Net.Helpers</PackageId>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
     <Authors>Jacob Pham</Authors>
     <Company>Jacob Pham</Company>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

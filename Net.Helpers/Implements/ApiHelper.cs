@@ -13,7 +13,13 @@ namespace Net.Helpers.Implements {
             _logHelper = logHelper;
             _stringHelper = stringHelper;
         }
-
+        /// <summary>
+        /// Call Api using restSharp lib
+        /// </summary>
+        /// <param name="url">Url to call API</param>
+        /// <param name="request">RestRequest Object : Contain all request info like Headers, body, querystring ....</param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
         public async Task<T> CallApi<T> (string url, RestRequest request = null) {
             var client = new RestClient {
             BaseUrl = new Uri (url)

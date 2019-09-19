@@ -13,6 +13,12 @@ namespace Net.Helpers.Implements
     public class StringHelper : IStringHelper
     {
 
+        /// <summary>
+        /// Serialize Object to Json String
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <param name="isFormating"></param>
+        /// <returns></returns>
         public string Serialize(object obj, bool isFormating = false)
         {
             var JsonSerializerSettings = new JsonSerializerSettings
@@ -26,6 +32,11 @@ namespace Net.Helpers.Implements
             }
             return JsonConvert.SerializeObject(obj, JsonSerializerSettings);
         }
+        /// <summary>
+        /// Convert Object to Json string in CamelCase
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public  string SerializeCamelCase(object obj)
         {
             return JsonConvert.SerializeObject(obj,
@@ -126,7 +137,12 @@ namespace Net.Helpers.Implements
             return page;
         }
         //End pagination
-
+        /// <summary>
+        /// Count Total Page of paging
+        /// </summary>
+        /// <param name="total">Total Item</param>
+        /// <param name="rowPerPage">Record to show each page</param>
+        /// <returns></returns>
         public int CountTotalPage(int total, int rowPerPage)
         {
             if (total % rowPerPage > 0)
@@ -171,7 +187,11 @@ namespace Net.Helpers.Implements
             return html;
         }
 
-
+        /// <summary>
+        /// Remove all white space from string
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
         public string RemoveWhiteSpace(string text)
         {
             text = Regex.Replace(text, @"\s+", "");
@@ -201,6 +221,11 @@ namespace Net.Helpers.Implements
             return rs;
         }
 
+        /// <summary>
+        /// Gen Ramdom OTP Code
+        /// </summary>
+        /// <param name="len"></param>
+        /// <returns></returns>
         public string RandomOTP(int len)
         {
             var str = "1234567890";
@@ -237,7 +262,11 @@ namespace Net.Helpers.Implements
             //return the value to the calling method
             return valid;
         }
-
+        /// <summary>
+        /// Check String is Username valid
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <returns></returns>
         public bool IsUsername(string userName)
         {
             const string pattern = @"^[a-zA-Z0-9._@]+$";
@@ -258,6 +287,10 @@ namespace Net.Helpers.Implements
             return valid;
         }
 
+        /// <summary>
+        /// Get GUID token
+        /// </summary>
+        /// <returns></returns>
         public string GetToken()
         {
             string loginToken = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
@@ -274,24 +307,43 @@ namespace Net.Helpers.Implements
             temp = string.Join("-", temp.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries));
             return Regex.Replace(temp, @"\-+", @"-").TrimStart(ch).TrimEnd(ch).ToLower();
         }
-
+        /// <summary>
+        /// Remove all vietnamese character from string
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public string StripVietnamese(string s)
         {
             Regex regex = new Regex("\\p{IsCombiningDiacriticalMarks}+");
             string temp = s.Normalize(NormalizationForm.FormD);
             return regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
         }
-
+        /// <summary>
+        /// Remove all space
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public string StripSpace(string s)
         {
             return string.Join("-", s.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries));
         }
-
+        /// <summary>
+        /// Remove all special character
+        /// </summary>
+        /// <param name="txt"></param>
+        /// <returns></returns>
         public  string StripSpecialchar(string txt)
         {
             var regex = "[^0-9a-zA-Z]+";
             return Regex.Replace(txt, regex, "");
         }
+        /// <summary>
+        /// get string path string if path string is exist
+        /// Ex: file.png is exist, this will return file-1.png
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
         public  string GetNewPathForDupes(string path, ref string fileName)
         {
             string directory = Path.GetDirectoryName(path);
@@ -310,7 +362,13 @@ namespace Net.Helpers.Implements
             fileName = new_file_name;
             return string.Format("{0}/{1}", directory, new_file_name);
         }
-
+        
+        /// <summary>
+        /// Convert minute to hour and minute
+        /// Ex: 110 min => 01:50
+        /// </summary>
+        /// <param name="minutes"></param>
+        /// <returns></returns>
         public string MinutesToHourMinute(int minutes)
         {
             var span = TimeSpan.FromMinutes(minutes);
