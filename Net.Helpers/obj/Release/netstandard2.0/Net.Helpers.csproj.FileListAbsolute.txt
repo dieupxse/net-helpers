@@ -1,0 +1,9 @@
+/Volumes/DATA/DATA/GIT/PROJECT/net-helpers/Net.Helpers/bin/Release/netstandard2.0/Net.Helpers.deps.json
+/Volumes/DATA/DATA/GIT/PROJECT/net-helpers/Net.Helpers/bin/Release/netstandard2.0/Net.Helpers.dll
+/Volumes/DATA/DATA/GIT/PROJECT/net-helpers/Net.Helpers/bin/Release/netstandard2.0/Net.Helpers.pdb
+/Volumes/DATA/DATA/GIT/PROJECT/net-helpers/Net.Helpers/obj/Release/netstandard2.0/Net.Helpers.csprojAssemblyReference.cache
+/Volumes/DATA/DATA/GIT/PROJECT/net-helpers/Net.Helpers/obj/Release/netstandard2.0/Net.Helpers.csproj.CoreCompileInputs.cache
+/Volumes/DATA/DATA/GIT/PROJECT/net-helpers/Net.Helpers/obj/Release/netstandard2.0/Net.Helpers.AssemblyInfoInputs.cache
+/Volumes/DATA/DATA/GIT/PROJECT/net-helpers/Net.Helpers/obj/Release/netstandard2.0/Net.Helpers.AssemblyInfo.cs
+/Volumes/DATA/DATA/GIT/PROJECT/net-helpers/Net.Helpers/obj/Release/netstandard2.0/Net.Helpers.dll
+/Volumes/DATA/DATA/GIT/PROJECT/net-helpers/Net.Helpers/obj/Release/netstandard2.0/Net.Helpers.pdb

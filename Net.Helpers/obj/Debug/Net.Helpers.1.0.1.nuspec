@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Net.Helpers</id>
+    <version>1.0.1</version>
+    <title>The Ultility, Helpers Library for Net Core App</title>
+    <authors>Jacob Pham</authors>
+    <owners>Jacob Pham</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This Lib contain huge of Helpers Functions:
+      - SecurityHelper: 
+      ```
+      string EncryptEAS128(string toEncrypt, string key);
+      string Base64Encode(string plainText);
+      string Base64Encode(byte[] plainText);
+      string Base64Decode(string base64EncodedData);
+      string Base64Decode(byte[] base64EncodedData);
+      string DecryptEAS128(String text, String key);
+      string UppercaseFirst(string s);
+      string MD5(string strInput);
+      int GetMaxDataLength();
+      bool IsKeySizeValid();
+      void GenerateRSAKeys(out string Key, out string privateKey);
+      string EncryptRSA(string Key, string plainText);
+      string DecryptRSA(string privateKey, string encryptedText);
+      bool CheckSignRSA(string data, string sign, string Key);
+      string BCryptPasswordEncoder(string password);
+      bool BCryptPasswordVerifier(string password, string hash);
+      string EncryptTripleDES(string key, string data);
+      string DecryptTripleDES(string key, string data);
+      string EncryptKeyIv(string text, string _key, string _iv);
+      string DecryptKeyIv(string text, string _key, string _iv);
+      bool ValidateReCaptcha(string recaptchaResponse, string secretKey);
+      string SHA1Hash(string input);
+      string SHA1(string input);
+      string PasswordHash(string password);
+      string ComputeHash(string plainText,string hashAlgorithm,byte[] saltBytes);
+      bool VerifyHash(string plainText,string hashAlgorithm,string hashValue);
+      string Base64UrlEncode(byte[] input);
+      string Base64UrlEncode(string input);
+      byte[] Base64UrlDecode(string input);
+      ```</description>
+    <releaseNotes>- 1.0.0: Init Project
+      - 1.0.1: Fixed issues namespace Dependences</releaseNotes>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="BCrypt.Net" version="0.1.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Caching.Memory" version="2.2.0" exclude="Build,Analyzers" />
+        <dependency id="RestSharp" version="106.6.10" exclude="Build,Analyzers" />
+        <dependency id="Veldrid.ImageSharp" version="4.7.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/Volumes/DATA/DATA/GIT/PROJECT/net-helpers/Net.Helpers/bin/Debug/netstandard2.0/Net.Helpers.dll" target="lib/netstandard2.0/Net.Helpers.dll" />
+  </files>
+</package>
