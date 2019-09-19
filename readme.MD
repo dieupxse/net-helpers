@@ -3,7 +3,9 @@ This lib contain a lot of Helper, Utilities Functions
 Repository: [https://github.com/dieupxse/net-helpers](https://github.com/dieupxse/net-helpers)
 
 ###SecurityHelper
+
 Security method, hash generate, hash verify, hash encrypt, encrypt algorithm
+
 ```
 string EncryptEAS128(string toEncrypt, string key);
 string Base64Encode(string plainText);
@@ -36,7 +38,9 @@ string Base64UrlEncode(string input);
 byte[] Base64UrlDecode(string input);
 ```
 ###StringHelper
+
 String Util
+
 ```
 string Serialize(object obj, bool isFormating = false);
 string SerializeCamelCase(object obj);
@@ -78,6 +82,7 @@ void ClearCache(string key);
 void ClearAllCache(string prefix = "");
 ```
 ###EmailHelper
+
 Send Email using SMTP server. This allow to send email in HTML format using any SMTP server like GMail, Yandex, Outlook, Custom SMTP Server...
 
 ```
@@ -89,7 +94,9 @@ bool SendMail(string to, string cc, string bcc, string subject, string content);
 ```
 
 ###ImageHelper
+
 Scale, Crop, Convert Base64 to Image ....
+
 ```
 Image<Rgba32> ResizeImage(Image<Rgba32> image, int width);
 bool SaveResizeImage(Image<Rgba32> img, int width, string path);
@@ -104,7 +111,9 @@ Image<Rgba32> CropImage(Image<Rgba32> image, int x, int y, int width, int height
 ```
 
 ###LogHelper
+
 Write Log to file
+
 ```
 void Log(string logMessage, string type = "info", string className = "");
 void Log(object logMessage, string type = "info", string className = "");
