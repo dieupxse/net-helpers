@@ -4,10 +4,17 @@
     <Title>The Ultility, Helpers Library for Net Core App</Title>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Net.Helpers</PackageId>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <Authors>Jacob Pham</Authors>
     <Company>Jacob Pham</Company>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>
+      https://github.com/dieupxse/net-helpers
+    </RepositoryUrl>
+    <PackageLicenseFile>
+      license.txt
+    </PackageLicenseFile>
+    <Copyright>@ Jacob Pham</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,5 +22,6 @@
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="2.2.0" />
     <PackageReference Include="RestSharp" Version="106.6.10" />
     <PackageReference Include="Veldrid.ImageSharp" Version="4.7.0" />
+    <None Include="license.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />
   </ItemGroup>
 </Project>
