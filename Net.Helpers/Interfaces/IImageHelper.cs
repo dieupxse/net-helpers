@@ -35,7 +35,7 @@ namespace Net.Helpers.Interfaces
         /// <returns></returns>
         bool SaveCroppedImage(Image<Rgba32> image, int maxWidth, int maxHeight, string filePath, long compress = 100);
 
-       
+
 
         /// <summary>
         /// Convert base64 to Image
@@ -47,7 +47,7 @@ namespace Net.Helpers.Interfaces
         string ImageToBase64(Image<Rgba32> image, IImageFormat format);
 
         byte[] ConvertStreamToByteArray(Stream input);
-
+        Image<Rgba32> CropImage(Image<Rgba32> image, int maxWidth, int maxHeight);
         Image<Rgba32> CropImage(Stream content, int x, int y, int width, int height);
 
         Image<Rgba32> CropImage(byte[] content, int x, int y, int width, int height);

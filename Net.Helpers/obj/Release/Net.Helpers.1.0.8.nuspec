@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Net.Helpers</id>
+    <version>1.0.8</version>
+    <title>The Ultility, Helpers Library for Net Core App</title>
+    <authors>Jacob Pham</authors>
+    <owners>Jacob Pham</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">license.txt</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <description>Package Description</description>
+    <copyright>@ Jacob Pham</copyright>
+    <repository url="https://github.com/dieupxse/net-helpers" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="BCrypt.Net" version="0.1.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Caching.Memory" version="2.2.0" exclude="Build,Analyzers" />
+        <dependency id="RestSharp" version="106.6.10" exclude="Build,Analyzers" />
+        <dependency id="Veldrid.ImageSharp" version="4.7.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/Volumes/DATA/DATA/GIT/PROJECT/net-helpers/Net.Helpers/bin/Release/netstandard2.0/Net.Helpers.dll" target="lib/netstandard2.0/Net.Helpers.dll" />
+    <file src="/Volumes/DATA/DATA/GIT/PROJECT/net-helpers/Net.Helpers/license.txt" target="license.txt" />
+  </files>
+</package>

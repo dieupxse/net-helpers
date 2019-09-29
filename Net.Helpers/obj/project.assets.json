@@ -3806,7 +3806,7 @@
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.6",
+    "version": "1.0.8",
     "restore": {
       "projectUniqueName": "/Volumes/DATA/DATA/GIT/PROJECT/net-helpers/Net.Helpers/Net.Helpers.csproj",
       "projectName": "Net.Helpers",

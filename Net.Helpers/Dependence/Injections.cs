@@ -1,3 +1,4 @@
+using System.Net.Mime;
 using System;
 using Net.Helpers.Implements;
 using Net.Helpers.Interfaces;
@@ -13,8 +14,9 @@ namespace Net.Helpers.Dependence
             services.AddScoped<ICacheHelper, CacheHelper>();
             services.AddScoped<IStringHelper, StringHelper>();
             services.AddScoped<ISecurityHelper, SecurityHelper>();
-            services.AddScoped<IApiHelper,ApiHelper>();
+            services.AddScoped<IApiHelper, ApiHelper>();
             services.AddScoped<IEmailHelper, EmailHelper>();
+            services.AddScoped<IImageHelper, ImageHelper>();
             return services;
         }
     }

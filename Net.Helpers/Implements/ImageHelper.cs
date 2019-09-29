@@ -121,18 +121,71 @@ namespace Net.Helpers.Implements
                     }
                 }
                 Rectangle rec = new Rectangle(left, top, srcWidth, srcHeight);
-                image.Mutate(x => x.Crop(rec).Resize(maxWidth,maxHeight));
+                image.Mutate(x => x.Crop(rec).Resize(maxWidth, maxHeight));
                 image.Save(filePath);
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw new Exception(e.Message);
             }
-            
+
         }
 
-       
+
+        public Image<Rgba32> CropImage(Image<Rgba32> image, int maxWidth, int maxHeight)
+        {
+            try
+            {
+                int left = 0;
+                int top = 0;
+                int srcWidth = maxWidth;
+                int srcHeight = maxHeight;
+                double croppedHeightToWidth = (double)maxHeight / maxWidth;
+                double croppedWidthToHeight = (double)maxWidth / maxHeight;
+
+                if (image.Width > image.Height)
+                {
+                    srcWidth = (int)(Math.Round(image.Height * croppedWidthToHeight));
+                    if (srcWidth < image.Width)
+                    {
+                        srcHeight = image.Height;
+                        left = (image.Width - srcWidth) / 2;
+                    }
+                    else
+                    {
+                        srcHeight = (int)Math.Round(image.Height * ((double)image.Width / srcWidth));
+                        srcWidth = image.Width;
+                        top = (image.Height - srcHeight) / 2;
+                    }
+                }
+                else
+                {
+                    srcHeight = (int)(Math.Round(image.Width * croppedHeightToWidth));
+                    if (srcHeight < image.Height)
+                    {
+                        srcWidth = image.Width;
+                        top = (image.Height - srcHeight) / 2;
+                    }
+                    else
+                    {
+                        srcWidth = (int)Math.Round(image.Width * ((double)image.Height / srcHeight));
+                        srcHeight = image.Height;
+                        left = (image.Width - srcWidth) / 2;
+                    }
+                }
+                Rectangle rec = new Rectangle(left, top, srcWidth, srcHeight);
+                image.Mutate(x => x.Crop(rec).Resize(maxWidth, maxHeight));
+                return image;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+
+        }
+
+
 
         /// <summary>
         /// Convert base64 to Image
@@ -201,9 +254,9 @@ namespace Net.Helpers.Implements
 
         public Image<Rgba32> CropImage(Stream content, int x, int y, int width, int height)
         {
-            using(Image<Rgba32> image = Image.Load(content))
+            using (Image<Rgba32> image = Image.Load(content))
             {
-                return CropImage(image,x,y,width,height);
+                return CropImage(image, x, y, width, height);
             }
         }
 
